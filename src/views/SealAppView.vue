@@ -1,5 +1,18 @@
-﻿<template>
+<template>
   <section :class="['screen', 'active', 'seal-page', cleanPreview ? 'clean-mode' : '']">
+    <header class="seal-header">
+      <div class="seal-header-left">
+        <div class="seal-header-logo" aria-hidden="true"></div>
+        <div>
+          <div class="seal-header-title">SEAL LAB</div>
+          <div class="seal-header-subtitle">电子印章样式生成器</div>
+        </div>
+      </div>
+      <div class="seal-header-right">
+        <span v-if="experienceMode" class="seal-header-badge">体验模式</span>
+        <button class="seal-header-back" type="button" @click="resetPage">重置</button>
+      </div>
+    </header>
     <div class="seal-layout">
       <aside class="template-panel">
         <div class="template-head">
